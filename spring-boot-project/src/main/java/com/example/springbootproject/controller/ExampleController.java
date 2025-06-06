@@ -16,6 +16,7 @@ public class ExampleController {
 
     @PostMapping(value="/example",produces = "application/json")
     public Object postExample(@RequestBody String exampleData) {
+        // this is simple post endpoint
         System.out.println("Received data: " + exampleData);
         return  exampleData;
     }
