@@ -10,6 +10,7 @@ public class ExampleController {
 
     @GetMapping("/example")
     public String getExample() {
+        // this is a simple GET endpoint
         return "Hello, this is an example response!";
     }
 
