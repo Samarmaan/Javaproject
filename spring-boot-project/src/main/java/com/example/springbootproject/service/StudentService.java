@@ -21,6 +21,16 @@ public class StudentService {
         return repository.save(student);
     }
 
+    public Student updateStudent(Long id, Student updatedStudent) {
+        return repository.findById(id).map(student -> {
+            student.setName(updatedStudent.getName());
+            student.setEmail(updatedStudent.getEmail());
+            student.setSurname(updatedStudent.getSurname());
+            student.setPassportNumber(updatedStudent.getPassportNumber());
+            return repository.save(student);
+        }).orElse(null);
+    }
+
     public void deleteStudent(Long id) {
         repository.deleteById(id);
     }
