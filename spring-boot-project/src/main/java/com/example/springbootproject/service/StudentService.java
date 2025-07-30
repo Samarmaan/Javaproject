@@ -61,6 +61,6 @@ public class StudentService {
      * @param id ID of the student to delete.
      */
     public void deleteStudent(Long id) {
-        repository.deleteAll();
+        repository.deleteById(id);
     }
 }
